@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Happy Valantine Gift</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-utilities.min.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    </head>
+    <body style="background-color: #222; width: 100%;">
+
+        <div class="container-fluid">
+            <h1 class="h1v">Will You Be My Valentine?</h1>
+            <div style="width: 100%; text-align: center; margin-top: 80px;">
+                <a href="val.html" style="font-size: 70px; font-weight: 700;
+                font-family: cursive; color: aliceblue; text-decoration: none;" for="y1">
+                Yes 🦋</a>
+                <br />
+                <p style="color:white; font-size: 50px; margin-top: 50px;">Or</p>
+                <br />
+                <a href="val.html" style="font-size: 70px; font-weight: 700;
+                font-family: cursive; color: aliceblue; text-decoration: none;" for="y2">
+                Yes 🦋</a>
+            </div>
+        </div>
+
+        <!-- background-color: rgba(216, 112, 147, 0.692); -->
+        <script>
+            function createHeart() {
+                const heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.innerHTML = "❤️";
+                document.body.appendChild(heart);
+        
+                // Random position
+                heart.style.left = Math.random() * 90 + "vw";
+                heart.style.animationDuration = (Math.random() * 7 + 7) + "s";
+        
+                // Remove heart after animation
+                setTimeout(() => {
+                    heart.remove();
+                }, 15000);
+            }
+        
+            window.onload = function () {
+            for (let i = 0; i < 10; i++) { // Generate a few hearts instantly
+                createHeart();
+            }
+            setInterval(createHeart, 500); // Keep generating new hearts
+        };
+            // Create hearts at intervals
+        </script>
+        <!-- <script>
+            function createHeart() {
+                const heartContainer = document.querySelector(".heart-container");
+                const heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.innerHTML = "❤️";
+                heartContainer.appendChild(heart);
+        
+                // Random position
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        
+                // Remove heart after animation
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000);
+            }
+        
+            // Create hearts at intervals
+            setInterval(createHeart, 300);
+        </script> -->
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
